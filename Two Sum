@@ -1,0 +1,17 @@
+Two Sum
+
+class Solution {
+    fun twoSum(nums: IntArray, target: Int): IntArray {
+        var intArray:IntArray = IntArray(0)
+        loop@ for (x in 0 .. nums.size-2){
+        for(y in 1..nums.size-1){
+            if(((nums[x] + nums[y]) == target) and (x!=y)){
+                intArray += x
+                intArray += y
+                break@loop
+            }
+        }
+    }
+    return intArray
+    }
+}
